@@ -110,19 +110,14 @@ function Menu() {
 }
 function Footer() {
   const hour = new Date().getHours();
-  const openHour = 12;
+  const openHour = 10;
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
   return (
     <footer className="footer">
       <div className="order">
         {isOpen ? (
-          <>
-            <p>
-              We're open until {closeHour}:00. Come visit us or order online!
-            </p>
-            <button className="btn">Order</button>
-          </>
+          <Order closeHour={closeHour} />
         ) : (
           <p>
             We are currently closed. Our hours are from {openHour} a.m. to{' '}
@@ -131,6 +126,16 @@ function Footer() {
         )}
       </div>
     </footer>
+  );
+}
+function Order(props) {
+  return (
+    <div className="order">
+      <p>
+        We're open until {props.closeHour}:00. Come visit us or order online!
+      </p>
+      <button className="btn">Order</button>
+    </div>
   );
 }
 
