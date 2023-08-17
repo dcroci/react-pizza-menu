@@ -186,7 +186,7 @@ SPACING SYSTEM (px)
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
 */
-@media (max-width: 991.98px) {
+@media (max-width: 700px) {
   .pizzas {
     list-style: none;
     display: grid;
